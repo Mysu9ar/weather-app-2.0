@@ -1,0 +1,74 @@
+body {
+  background: linear-gradient(
+    68.6deg,
+    rgb(252, 165, 241) 1.8%,
+    rgb(181, 255, 255) 100.5%
+  );
+}
+.container {
+  margin: 40px 40px;
+  max-width: 600px;
+}
+.city {
+  padding-top: 8px;
+  text-align: center;
+}
+.city:hover {
+  cursor: pointer;
+}
+.weather-1 {
+  font-size: 70px;
+  color: #42a5f5;
+}
+.temp-now {
+  font-size: 70px;
+  color: black;
+}
+.info {
+  padding-top: 32px;
+}
+ul,
+li {
+  text-align: left;
+  font-size: 15px;
+  list-style: none;
+}
+tr,
+td {
+  max-width: 70%;
+  padding: 10px;
+  text-align: center;
+}
+button {
+  margin-left: 10px;
+}
+.card {
+  text-align: center;
+  opacity: 0.9;
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+h5 {
+  opacity: 0.8;
+}
+.row-cols-1 {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.card-text {
+  font-weight: bolder;
+  line-height: 2;
+  font-size: 17px;
+}
+.card-temp {
+  line-height: 0.02;
+  font-size: 12px;
+}
+table {
+  margin-right: 70px;
+}
+#top-cities {
+  max-width: 430px;
+  margin-left: -20px;
+  font-size: 14px;
+}
