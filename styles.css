@@ -24,6 +24,11 @@ body {
   font-size: 70px;
   color: black;
 }
+.main-temp small {
+  position: relative;
+  font-size: 16px;
+  top: -32px;
+}
 .info {
   padding-top: 32px;
 }
