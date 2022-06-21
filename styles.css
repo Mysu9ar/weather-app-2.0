@@ -113,6 +113,7 @@ table {
 .my-app-link {
   text-align: left;
   margin-left: 25px;
+  margin-top: 10px;
 }
 #description::first-letter {
   text-transform: capitalize;
