@@ -80,6 +80,7 @@ h5 {
   opacity: 0.8;
 }
 .row-cols-1 {
+  margin-top: -30px;
   margin-left: 20px;
   margin-right: 20px;
 }
@@ -112,8 +113,6 @@ table {
 }
 .my-app-link {
   text-align: left;
-  margin-left: 25px;
-  margin-top: 10px;
 }
 #description::first-letter {
   text-transform: capitalize;
