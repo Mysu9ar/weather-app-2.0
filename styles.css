@@ -93,6 +93,7 @@ h5 {
   font-size: 12px;
 }
 table {
+  margin-top: -15px;
   margin-right: 70px;
 }
 #top-cities {
