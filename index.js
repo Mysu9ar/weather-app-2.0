@@ -55,11 +55,14 @@ function showNewTemp(response) {
   let currentTemp = document.querySelector("#temperature");
   currentTemp.innerHTML = `${temperature}`;
 
+  let description = document.querySelector("li#description");
+  description.innerHTML = `${response.data.weather[0].description}`;
+
   let humidity = document.querySelector("li#humi");
   humidity.innerHTML = `Humidity: ${response.data.main.humidity}%`;
 
   let speed = document.querySelector("li#wind");
-  speed.innerHTML = `Wind: ${Math.round(response.data.wind.speed)} m/h`;
+  speed.innerHTML = `Wind: ${Math.round(response.data.wind.speed)} km/h`;
 
   let icon = document.querySelector("#icon");
   icon.setAttribute(
