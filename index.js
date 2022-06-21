@@ -49,7 +49,9 @@ function showNewTemp(response) {
   let city = document.querySelector("li#main-city");
   city.innerHTML = response.data.name;
 
-  let temperature = Math.round(response.data.main.temp);
+  celsiusTemp = response.data.main.temp;
+
+  let temperature = Math.round(celsiusTemp);
   let currentTemp = document.querySelector("#temperature");
   currentTemp.innerHTML = `${temperature}`;
 
@@ -62,6 +64,27 @@ function showNewTemp(response) {
     `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
 }
+
+function showFahrenheit(event) {
+  event.preventDefault();
+  let tempElement = document.querySelector("#temperature");
+  let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
+  tempElement.innerHTML = Math.round(fahrenheitTemp);
+}
+
+let celsiusTemp = null;
+
+let fahrenheit = document.querySelector("#far");
+fahrenheit.addEventListener("click", showFahrenheit);
+
+function showCelcius(event) {
+  event.preventDefault();
+  let tempElement = document.querySelector("#temperature");
+  tempElement.innerHTML = Math.round(celsiusTemp);
+}
+
+let celsius = document.querySelector("#cel");
+celsius.addEventListener("click", showCelcius);
 
 // show weather in Kyiv
 function showWeatherKyiv(response) {

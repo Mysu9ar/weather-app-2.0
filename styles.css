@@ -27,9 +27,13 @@ body {
 .units {
   position: relative;
   font-size: 15px;
-  top: -38px;
+  top: -16px;
+}
+#cel,
+#far {
   text-decoration: none;
 }
+
 #main-city {
   font-weight: bolder;
 }
