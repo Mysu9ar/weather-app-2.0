@@ -27,12 +27,11 @@ body {
 .units {
   position: relative;
   font-size: 15px;
-  top: -16px;
-  font-style: none;
+  top: -38px;
+  text-decoration: none;
 }
-#main-city,
-#temperature {
-  font: bolder;
+#main-city {
+  font-weight: bolder;
 }
 
 .info {
