@@ -98,3 +98,7 @@ table {
   margin-left: 20px;
   margin-top: 10px;
 }
+.my-app-link {
+  text-align: left;
+  margin-left: 25px;
+}
