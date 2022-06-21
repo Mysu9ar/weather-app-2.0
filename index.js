@@ -55,6 +55,12 @@ function showNewTemp(response) {
 
   let humidity = document.querySelector("li#humi");
   humidity.innerHTML = `Humidity: ${response.data.main.humidity}`;
+
+  let icon = document.querySelector("#icon");
+  icon.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 
 // show weather in Kyiv
