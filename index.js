@@ -46,7 +46,7 @@ function findCity(city) {
 }
 
 function showNewTemp(response) {
-  let city = document.querySelector("li#main-city");
+  let city = document.querySelector("#main-city");
   city.innerHTML = response.data.name;
 
   celsiusTemp = response.data.main.temp;
@@ -56,7 +56,10 @@ function showNewTemp(response) {
   currentTemp.innerHTML = `${temperature}`;
 
   let humidity = document.querySelector("li#humi");
-  humidity.innerHTML = `Humidity: ${response.data.main.humidity}`;
+  humidity.innerHTML = `Humidity: ${response.data.main.humidity}%`;
+
+  let speed = document.querySelector("li#wind");
+  speed.innerHTML = `Wind: ${Math.round(response.data.wind.speed)} m/h`;
 
   let icon = document.querySelector("#icon");
   icon.setAttribute(

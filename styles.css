@@ -9,6 +9,13 @@ body {
   margin: 40px 40px;
   max-width: 600px;
 }
+h2,
+h3 {
+  line-height: 1;
+  color: grey;
+  text-align: left;
+  margin-left: 25px;
+}
 .city {
   padding-top: 8px;
   text-align: center;
@@ -38,9 +45,11 @@ body {
 }
 
 #main-city {
-  font-weight: bolder;
+  font-size: 18px;
 }
-
+#date {
+  font-size: 16px;
+}
 .info {
   line-height: 1.35;
   padding-top: 36px;
@@ -98,7 +107,6 @@ table {
 #icon {
   height: 100px;
   width: 100px;
-  margin-left: 20px;
   margin-top: 10px;
 }
 .my-app-link {
