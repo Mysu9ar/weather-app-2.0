@@ -28,10 +28,13 @@ body {
   position: relative;
   font-size: 15px;
   top: -16px;
+  left: -15px;
 }
 #cel,
 #far {
   text-decoration: none;
+  color: black;
+  font-weight: 450;
 }
 
 #main-city {
