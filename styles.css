@@ -24,13 +24,21 @@ body {
   font-size: 70px;
   color: black;
 }
-.main-temp small {
+.units {
   position: relative;
-  font-size: 16px;
-  top: -32px;
+  font-size: 15px;
+  top: -16px;
+  font-style: none;
 }
+#main-city,
+#temperature {
+  font: bolder;
+}
+
 .info {
-  padding-top: 32px;
+  line-height: 1.35;
+  padding-top: 36px;
+  margin-left: 20px;
 }
 ul,
 li {
@@ -79,4 +87,11 @@ table {
 }
 .git-link {
   font-weight: bolder;
+}
+
+#icon {
+  height: 100px;
+  width: 100px;
+  margin-left: 20px;
+  margin-top: 10px;
 }
