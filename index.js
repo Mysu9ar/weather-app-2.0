@@ -150,3 +150,5 @@ document.querySelector("#current").addEventListener("click", () => {
   }
   navigator.geolocation.getCurrentPosition(currentPosition);
 });
+
+findCity("Kyiv");
