@@ -151,4 +151,32 @@ document.querySelector("#current").addEventListener("click", () => {
   navigator.geolocation.getCurrentPosition(currentPosition);
 });
 
+function showForecast() {
+  let forecastElement = document.querySelecto("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  forecastHTML =
+    forecastHTML +
+    `<div class="col-2">
+                  <h5 class="card-title">
+                      <i class="fa-solid fa-sun"></i>
+                  </h5>
+                  <p class="card-text">15°</p>
+                  <p class="card-temp">Sun</p>
+              </div>
+              `;
+  forecastHTML =
+    forecastHTML +
+    `<div class="col-2">
+                  <h5 class="card-title">
+                      <i class="fa-solid fa-sun"></i>
+                  </h5>
+                  <p class="card-text">15°</p>
+                  <p class="card-temp">Fri</p>
+                </div>
+              `;
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 findCity("Kyiv");

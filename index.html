@@ -9,9 +9,12 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
-    
+
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="https://kit.fontawesome.com/662f197e7b.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/662f197e7b.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="styles.css" />
   </head>
 
@@ -19,58 +22,85 @@
     <div class="container">
       <div class="p-3 card shadow border">
         <div class="p-4 rounded">
-          <div class="color"> 
+          <div class="color">
             <form class="search-form" id="search-form">
-            <div class="input-group">
-              <input type="search"
-                class="form-control"
-                w.50 placeholder="Enter your city"
-                id="city-input"
-              />
-              
-              <span>
-              <button type="button" class="btn btn-success" id="search-button" input type="submit">Search</button></span>
-              <span><button type="button" class="btn btn-primary" id="current" input type="submit">Current</button></span>
-            </div>
-          </form>
+              <div class="input-group">
+                <input
+                  type="search"
+                  class="form-control"
+                  w.50
+                  placeholder="Enter your city"
+                  id="city-input"
+                />
+
+                <span>
+                  <button
+                    type="button"
+                    class="btn btn-success"
+                    id="search-button"
+                    input
+                    type="submit"
+                  >
+                    Search
+                  </button></span
+                >
+                <span
+                  ><button
+                    type="button"
+                    class="btn btn-primary"
+                    id="current"
+                    input
+                    type="submit"
+                  >
+                    Current
+                  </button></span
+                >
+              </div>
+            </form>
             <div class="row city" id="top-cities">
               <div class="col-2" id="lviv">Lviv</div>
               <div class="col-2" id="kyiv">Kyiv</div>
               <div class="col-2" id="kharkiv">Kharkiv</div>
               <div class="col-2" id="dnipro">Dnipro</div>
               <div class="col-2" id="odesa">Odesa</div>
-              
             </div>
           </div>
         </div>
         <h2 id="main-city">Kyiv</h2>
-              <h3 id="date"></h3>
-<div class="main-field">
-        <table>
-          <td>
-            <img id="icon" class="float-left"/>
-          </td>
+        <h3 id="date"></h3>
+        <div class="main-field">
+          <table>
+            <td>
+              <img id="icon" class="float-left" />
+            </td>
 
-          <td class="temp-now" id="temperature"></td><td class="units"><a href="#" id="cel">°С</a> | <a href="#" id="far">°F</a></td>
-       
-          <td class="info">
-            <ul>
-              <li id="description"></li>
-              <li id="humi"></li>
-              <li id="wind"></li>
-            </ul>
-          </td>
-        </table>
+            <td class="temp-now" id="temperature"></td>
+            <td class="units">
+              <a href="#" id="cel">°С</a> | <a href="#" id="far">°F</a>
+            </td>
 
-       
-</div>
-              <script src="index.js"></script>
-      
+            <td class="info">
+              <ul>
+                <li id="description"></li>
+                <li id="humi"></li>
+                <li id="wind"></li>
+              </ul>
+            </td>
+          </table>
+
+          <div class="weather-forecast" id="forecast"></div>
+        </div>
+        <script src="index.js"></script>
+      </div>
     </div>
     <div class="my-app-link">
-    <a href="https://github.com/Mysu9ar/weather-app-2.0" style="text-decoration:none" class="git-link">Open source code</a>
-    by Yana Mazhuha
-    
+      <a
+        href="https://github.com/Mysu9ar/weather-app-2.0"
+        style="text-decoration: none"
+        class="git-link"
+        >Open source code</a
+      >
+      by Yana Mazhuha
     </div>
   </body>
 </html>
