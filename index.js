@@ -152,31 +152,26 @@ document.querySelector("#current").addEventListener("click", () => {
 });
 
 function showForecast() {
-  let forecastElement = document.querySelecto("#forecast");
-
+  let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="row">`;
-  forecastHTML =
-    forecastHTML +
-    `<div class="col-2">
+  let days = ["Tue", "Wed", "Thu", "Sat", "Sun", "Mon"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col-2">
                   <h5 class="card-title">
                       <i class="fa-solid fa-sun"></i>
                   </h5>
                   <p class="card-text">15°</p>
-                  <p class="card-temp">Sun</p>
-              </div>
-              `;
-  forecastHTML =
-    forecastHTML +
-    `<div class="col-2">
-                  <h5 class="card-title">
-                      <i class="fa-solid fa-sun"></i>
-                  </h5>
-                  <p class="card-text">15°</p>
-                  <p class="card-temp">Fri</p>
+                  <p class="card-temp">${day}</p>
                 </div>
               `;
+  });
+
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
 }
+
+showForecast();
 
 findCity("Kyiv");
