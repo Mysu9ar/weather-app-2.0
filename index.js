@@ -48,7 +48,6 @@ function findCity(city) {
 function getForecast(coordinates) {
   let apiKey = "85a5dbf30e733b0f6b4252e330196182";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
-  console.log(apiUrl);
 
   axios(apiUrl).then(showForecast);
 }
@@ -70,7 +69,7 @@ function showNewTemp(response) {
   humidity.innerHTML = `Humidity: ${response.data.main.humidity}%`;
 
   let speed = document.querySelector("li#wind");
-  speed.innerHTML = `Wind: ${Math.round(response.data.wind.speed)} km/h`;
+  speed.innerHTML = `Wind: ${Math.round(response.data.wind.speed)} m/sec`;
 
   let icon = document.querySelector("#icon");
   icon.setAttribute(
@@ -161,19 +160,26 @@ document.querySelector("#current").addEventListener("click", () => {
   navigator.geolocation.getCurrentPosition(currentPosition);
 });
 
-function showForecast() {
+function showForecast(response) {
   let forecastElement = document.querySelector("#forecast");
+
+  let forecastLoop = response.data.daily;
+
   let forecastHTML = `<div class="row">`;
-  let days = ["Tue", "Wed", "Thu", "Sat", "Sun", "Mon"];
-  days.forEach(function (day) {
+  forecastLoop.forEach(function (forecastDay) {
     forecastHTML =
       forecastHTML +
-      `<div class="col-2">
+      `<div class="col-2" #column>
                   <h5 class="card-title">
-                      <i class="fa-solid fa-sun"></i>
+                      <img src="http://openweathermap.org/img/wn/${
+                        forecastDay.weather[0].icon
+                      }@2x.png" class="forecast-icon"/>
                   </h5>
-                  <p class="card-text">15°</p>
-                  <p class="card-temp">${day}</p>
+                  <p class="min-temp">${Math.round(forecastDay.temp.min)}°</p>
+                  <span class="max-temp">${Math.round(
+                    forecastDay.temp.max
+                  )}°</span>
+                  <p class="card-temp">${forecastDay.dt}</p>
                 </div>
               `;
   });
@@ -181,7 +187,5 @@ function showForecast() {
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
 }
-
-showForecast();
 
 findCity("Kyiv");
