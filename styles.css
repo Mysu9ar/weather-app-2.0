@@ -133,6 +133,7 @@ h5 {
 }
 #forecast {
   padding-left: 15px;
+  margin-bottom: 15px;
 }
 .max-temp {
   font-weight: bolder;
