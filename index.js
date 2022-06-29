@@ -21,6 +21,13 @@ let day = days[now.getDay()];
 
 date.innerHTML = `${day}, ${hours}:${minutes}`;
 
+function transformDay(datenumber) {
+  let date = new Date(datenumber * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+  return days[day];
+}
+
 function showСity(event) {
   event.preventDefault();
   let cityInput = document.querySelector("#city-input");
@@ -165,11 +172,12 @@ function showForecast(response) {
 
   let forecastLoop = response.data.daily;
 
-  let forecastHTML = `<div class="row">`;
-  forecastLoop.forEach(function (forecastDay) {
-    forecastHTML =
-      forecastHTML +
-      `<div class="col-2" #column>
+  let forecastHTML = `<div class="row" #forecast-table>`;
+  forecastLoop.forEach(function (forecastDay, index) {
+    if (index < 6 && index > 0) {
+      forecastHTML =
+        forecastHTML +
+        `<div class="col" #column>
                   <h5 class="card-title">
                       <img src="http://openweathermap.org/img/wn/${
                         forecastDay.weather[0].icon
@@ -179,9 +187,10 @@ function showForecast(response) {
                   <span class="max-temp">${Math.round(
                     forecastDay.temp.max
                   )}°</span>
-                  <p class="card-temp">${forecastDay.dt}</p>
+                  <p class="card-temp">${transformDay(forecastDay.dt)}</p>
                 </div>
               `;
+    }
   });
 
   forecastHTML = forecastHTML + `</div>`;
